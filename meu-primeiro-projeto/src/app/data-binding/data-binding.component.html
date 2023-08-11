@@ -7,3 +7,11 @@
 <button [disabled]="buttonDisabled">Click</button>
 <br>
 <img [src] ="imgSrc" [alt]="imgAlt" [title]="imgAlt">
+<br>
+<hr>
+<h2>Event Binding</h2>
+<button (click)="alertaInfo($event)">Click</button>
+<br>
+<br>
+<div (mousemove)="mouseMoveTest($event)" style = "background-color: red; width: 300px; height: 300px"></div>
+{{position.x}} - {{position.y}}
