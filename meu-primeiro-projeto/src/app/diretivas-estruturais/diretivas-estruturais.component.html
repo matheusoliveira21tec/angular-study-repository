@@ -6,3 +6,9 @@
 <p *ngIf="conditionClick"> True</p>
 <p *ngIf="!conditionClick"> False</p>
 <button (click)="onClick()">Click</button>
+
+<hr>
+<ul>
+    <li *ngFor="let item of list; let i = index" (click)="onClickEventList(i)">{{i}} {{item.name}} - age {{item.age}}</li>
+</ul>
+<button (click)="addOnList()">Add</button>
