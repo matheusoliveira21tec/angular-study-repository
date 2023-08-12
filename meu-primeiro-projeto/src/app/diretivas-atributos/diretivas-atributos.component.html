@@ -1,4 +1,4 @@
-<div *ngIf="name != 'Matheus'">
+<!--<div *ngIf="name != 'Matheus'">
     <p [ngClass]="{active: condition, disabled: !condition}">ngClass</p>
     <p [ngStyle]="{'height': height, 'background-color': bgColor}">ngStyle</p>
 </div>
@@ -9,3 +9,10 @@
 <ul>
     <li *ngFor="let item of list" (click)="salvar()">{{item.name}}</li>
 </ul>
+-->
+
+<ng-template ngFor let-item [ngForOf]="list">
+    <p>{{item.name}}</p>
+</ng-template>
+<input type="text" [(ngModel)]="name">
+<button (click)="salvar()">Salvar</button>
