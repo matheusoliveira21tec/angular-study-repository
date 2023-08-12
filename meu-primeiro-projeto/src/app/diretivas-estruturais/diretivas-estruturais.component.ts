@@ -9,6 +9,7 @@ export class DiretivasEstruturaisComponent implements OnInit{
 public condition:boolean = true;
 public list:Array<{name:string, age:number}> = [{name:'Matheus', age:22},{name:'Lucas', age:25}];
 public conditionClick:boolean = true;
+public name:string = 'Matheus';
 constructor() { }
 ngOnInit(): void {
   setInterval(() => {

@@ -12,3 +12,12 @@
     <li *ngFor="let item of list; let i = index" (click)="onClickEventList(i)">{{i}} {{item.name}} - age {{item.age}}</li>
 </ul>
 <button (click)="addOnList()">Add</button>
+
+<hr>
+
+<input type="text" [(ngModel)]="name">
+<div [ngSwitch]="name">
+    <div *ngSwitchCase="'Matheus'">Hello {{name}}</div>
+    <div *ngSwitchCase="'Lucas'">Hello {{name}}</div>
+    <div *ngSwitchDefault>Default</div>
+</div>
