@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiretivasAtributosComponent implements OnInit{
 public condition:boolean = false;
+public height:string = '100px';
+public bgColor: string = 'red';
 constructor() { }
 ngOnInit(): void {
   setInterval(() => {
@@ -14,6 +16,14 @@ ngOnInit(): void {
       this.condition = false;
     }else{
       this.condition = true;}
+
+    if(this.height == '100px'){
+      this.bgColor = 'blue';
+      this.height = '200px';
+    }else{
+      this.height = '100px';
+      this.bgColor = 'red';
+    }
   },2000);
 }
 }
