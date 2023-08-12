@@ -9,6 +9,8 @@ export class DiretivasAtributosComponent implements OnInit{
 public condition:boolean = false;
 public height:string = '100px';
 public bgColor: string = 'red';
+public name:string = '';
+public list:Array<{name:string}> = [];
 constructor() { }
 ngOnInit(): void {
   setInterval(() => {
@@ -25,5 +27,9 @@ ngOnInit(): void {
       this.bgColor = 'red';
     }
   },2000);
+}
+public salvar(){
+  this.list.push({name:this.name});
+  this.name = '';
 }
 }
