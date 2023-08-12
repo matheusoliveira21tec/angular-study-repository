@@ -12,7 +12,9 @@
 -->
 
 <ng-template ngFor let-item [ngForOf]="list">
-    <p>{{item.name}}</p>
+    <p>{{item.name | uppercase}}</p>
 </ng-template>
 <input type="text" [(ngModel)]="name">
 <button (click)="salvar()">Salvar</button>
+
+{{date | date:'dd/MM/yyyy'}}

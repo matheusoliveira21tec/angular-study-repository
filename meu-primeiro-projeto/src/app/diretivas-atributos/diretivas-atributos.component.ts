@@ -11,6 +11,7 @@ public height:string = '100px';
 public bgColor: string = 'red';
 public name:string = '';
 public list:Array<{name:string}> = [];
+public date:Date = new Date();
 constructor() { }
 ngOnInit(): void {
   setInterval(() => {
